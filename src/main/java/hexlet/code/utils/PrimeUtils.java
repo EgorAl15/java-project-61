@@ -1,9 +1,7 @@
 package hexlet.code.utils;
 
 public class PrimeUtils {
-    /**
-     * Предикат: возвращает true, если число простое.
-     */
+    /** Предикат: возвращает true, если число простое. */
     public static boolean isPrime(int n) {
         // Числа меньше 2 не являются простыми
         if (n < 2) {

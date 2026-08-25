@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class EvenGame {
 
@@ -24,7 +24,12 @@ public class EvenGame {
             if (answer.equalsIgnoreCase(correctAnswer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println(
+                        "'"
+                                + answer
+                                + "' is wrong answer ;(. Correct answer was '"
+                                + correctAnswer
+                                + "'.");
                 System.out.println("Let's try again, " + name + "!");
                 return; // Завершаем игру при ошибке
             }

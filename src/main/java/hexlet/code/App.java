@@ -1,13 +1,11 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
-// Импорты всех игр
-import hexlet.code.games.EvenGame;
 import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
 import hexlet.code.games.GcdGame;
-import hexlet.code.games.ProgressionGame;
 import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {

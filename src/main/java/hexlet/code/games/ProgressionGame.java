@@ -1,9 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.AnswerCalculator;
 import hexlet.code.Engine;
 import hexlet.code.QuestionGenerator;
-import hexlet.code.AnswerCalculator;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,7 +12,11 @@ public class ProgressionGame {
 
     public static void play(Scanner scanner, String name) {
         System.out.println(DESCRIPTION);
-        Engine.run(scanner, name, new ProgressionQuestionGenerator(), new ProgressionAnswerCalculator());
+        Engine.run(
+                scanner,
+                name,
+                new ProgressionQuestionGenerator(),
+                new ProgressionAnswerCalculator());
     }
 
     static class ProgressionQuestionGenerator implements QuestionGenerator {
@@ -57,9 +60,9 @@ public class ProgressionGame {
             int step = 0;
             // Ищем шаг по двум соседним известным числам
             for (int i = 0; i < parts.length - 1; i++) {
-                if (!"..".equals(parts[i]) && !"..".equals(parts[i+1])) {
+                if (!"..".equals(parts[i]) && !"..".equals(parts[i + 1])) {
                     int num1 = Integer.parseInt(parts[i]);
-                    int num2 = Integer.parseInt(parts[i+1]);
+                    int num2 = Integer.parseInt(parts[i + 1]);
                     step = num2 - num1;
                     break;
                 }

@@ -1,15 +1,15 @@
 package hexlet.code.games;
 
+import hexlet.code.AnswerCalculator;
 import hexlet.code.Engine;
 import hexlet.code.QuestionGenerator;
-import hexlet.code.AnswerCalculator;
 import hexlet.code.utils.PrimeUtils;
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class PrimeGame {
-    private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String DESCRIPTION =
+            "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final Random RANDOM = new Random();
 
     public static void play(Scanner scanner, String name) {

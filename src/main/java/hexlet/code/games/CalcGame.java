@@ -1,9 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.AnswerCalculator;
 import hexlet.code.Engine;
 import hexlet.code.QuestionGenerator;
-import hexlet.code.AnswerCalculator;
-
 import java.util.Random;
 import java.util.Scanner;
 

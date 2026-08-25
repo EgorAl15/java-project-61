@@ -1,10 +1,9 @@
 package hexlet.code.games;
 
+import hexlet.code.AnswerCalculator;
 import hexlet.code.Engine;
 import hexlet.code.QuestionGenerator;
-import hexlet.code.AnswerCalculator;
-import hexlet.code.utils.GcdUtils; // Убедись, что у тебя есть этот файл с методом computeGcd
-
+import hexlet.code.utils.GcdUtils;
 import java.util.Random;
 import java.util.Scanner;
 
