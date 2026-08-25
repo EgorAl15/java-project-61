@@ -26,6 +26,17 @@ cd java-project-61
 
 ---
 
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo2.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo3.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo4.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo5.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo6.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo7.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo8.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo9.png")
+![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo10.png")
+
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 
