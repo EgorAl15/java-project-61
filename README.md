@@ -21,7 +21,10 @@ cd java-project-61
 ```
 ## Использование
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-
+![Game Demo](docs/game-demo.png)
+![Game Demo](docs/game-demo2.png)
+![Game Demo](docs/game-demo3.png)
+![Game Demo](docs/game-demo4.png)
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 
