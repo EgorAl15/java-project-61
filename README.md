@@ -19,7 +19,6 @@
 git clone https://github.com/EgorAl15/java-project-61.git
 cd java-project-61
 ```
-
 ## Использование
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 ![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo.png")
@@ -33,7 +32,6 @@ cd java-project-61
 ![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo9.png")
 ![Game Demo]("C:\Users\Егор\IdeaProjects\brain-games\docs\game-demo10.png")
 ---
-
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 
