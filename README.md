@@ -25,6 +25,12 @@ cd java-project-61
 ![Game Demo](docs/game-demo2.png)
 ![Game Demo](docs/game-demo3.png)
 ![Game Demo](docs/game-demo4.png)
+![Game Demo](docs/game-demo5.png)
+![Game Demo](docs/game-demo6.png)
+![Game Demo](docs/game-demo7.png)
+![Game Demo](docs/game-demo8.png)
+![Game Demo](docs/game-demo9.png)
+![Game Demo](docs/game-demo10.png)
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 
