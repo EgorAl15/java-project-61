@@ -24,35 +24,29 @@ public class App {
 
         String choice = scanner.nextLine().trim();
 
-        if (choice.equals("0")) {
-            return;
-        }
-
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = scanner.nextLine().trim();
-        System.out.println("Hello, " + name + "!");
-
         switch (choice) {
             case "1":
+                Cli.greetUser();
                 break;
             case "2":
-                EvenGame.play(scanner, name);
+                EvenGame.run();
                 break;
             case "3":
-                CalcGame.play(scanner, name);
+                CalcGame.run();
                 break;
             case "4":
-                GcdGame.play(scanner, name);
+                GcdGame.run();
                 break;
             case "5":
-                ProgressionGame.play(scanner, name);
+                ProgressionGame.run();
                 break;
             case "6":
-                PrimeGame.play(scanner, name);
+                PrimeGame.run();
+                break;
+            case "0":
                 break;
             default:
-                break;
+                System.out.println("Unknown user choice: " + choice);
         }
     }
 }

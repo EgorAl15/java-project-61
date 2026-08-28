@@ -3,25 +3,26 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int ROUNDS_COUNT = 3;
+    public static final int ROUNDS_COUNT = 3;
 
-    public static void run(
-            Scanner scanner,
-            String name,
-            QuestionGenerator questionGenerator,
-            AnswerCalculator answerCalculator) {
+    public static void run(String description, String[][] gameData) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("Let's try to solve them.");
+        System.out.print("May I have your name? ");
+        String name = scanner.nextLine().trim();
 
-        for (int i = 0; i < ROUNDS_COUNT; i++) {
-            String question = questionGenerator.generate();
-            System.out.print("Question: " + question + "\nYour answer: ");
+        System.out.println("Hello, " + name + "!");
+        System.out.println(description);
 
-            // Читаем ответ пользователя как строку
+        for (String[] round : gameData) {
+            String question = round[0];
+            String correctAnswer = round[1];
+
+            System.out.println("Question: " + question);
+            System.out.print("Your answer: ");
+
             String userAnswer = scanner.nextLine().trim();
-
-            // Получаем правильный ответ как строку
-            String correctAnswer = answerCalculator.calculate(question);
 
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct!");

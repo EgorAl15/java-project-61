@@ -1,35 +1,25 @@
 package hexlet.code.games;
 
-import hexlet.code.AnswerCalculator;
 import hexlet.code.Engine;
-import hexlet.code.QuestionGenerator;
 import hexlet.code.utils.PrimeUtils;
 import java.util.Random;
-import java.util.Scanner;
 
 public class PrimeGame {
     private static final String DESCRIPTION =
             "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final int MAX_NUMBER = 100;
     private static final Random RANDOM = new Random();
 
-    public static void play(Scanner scanner, String name) {
-        System.out.println(DESCRIPTION);
-        Engine.run(scanner, name, new PrimeQuestionGenerator(), new PrimeAnswerCalculator());
-    }
+    public static void run() {
+        String[][] gameData = new String[Engine.ROUNDS_COUNT][2];
 
-    static class PrimeQuestionGenerator implements QuestionGenerator {
-        @Override
-        public String generate() {
-            int number = RANDOM.nextInt(99) + 2; // от 2 до 100
-            return String.valueOf(number);
-        }
-    }
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            int number = RANDOM.nextInt(MAX_NUMBER) + 1;
 
-    static class PrimeAnswerCalculator implements AnswerCalculator {
-        @Override
-        public String calculate(String question) {
-            int number = Integer.parseInt(question);
-            return PrimeUtils.isPrime(number) ? "yes" : "no";
+            gameData[i][0] = String.valueOf(number);
+            gameData[i][1] = PrimeUtils.isPrime(number) ? "yes" : "no";
         }
+
+        Engine.run(DESCRIPTION, gameData);
     }
 }

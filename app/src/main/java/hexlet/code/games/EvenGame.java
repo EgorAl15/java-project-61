@@ -1,40 +1,29 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import java.util.Random;
-import java.util.Scanner;
 
 public class EvenGame {
 
-    private static final int ROUNDS_TO_WIN = 3;
+    private static final String DESCRIPTION =
+            "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int MAX_NUMBER = 100;
     private static final Random RANDOM = new Random();
 
-    public static void play(Scanner scanner, String name) {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static void run() {
+        String[][] gameData = new String[Engine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < ROUNDS_TO_WIN; i++) {
-            int number = RANDOM.nextInt(100);
-            System.out.println("Question: " + number);
-            System.out.print("Your answer: ");
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            int number = RANDOM.nextInt(MAX_NUMBER);
 
-            String answer = scanner.nextLine().trim();
-
-            boolean isEven = number % 2 == 0;
-            String correctAnswer = isEven ? "yes" : "no";
-
-            if (answer.equalsIgnoreCase(correctAnswer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println(
-                        "'"
-                                + answer
-                                + "' is wrong answer ;(. Correct answer was '"
-                                + correctAnswer
-                                + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                return; // Завершаем игру при ошибке
-            }
+            gameData[i][0] = String.valueOf(number);
+            gameData[i][1] = isEven(number) ? "yes" : "no";
         }
 
-        System.out.println("Congratulations, " + name + "!");
+        Engine.run(DESCRIPTION, gameData);
+    }
+
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
     }
 }
