@@ -26,7 +26,7 @@ public class App {
 
         switch (choice) {
             case "1":
-                Cli.greetUser();
+                Cli.greetUser(scanner);
                 break;
             case "2":
                 EvenGame.run();
