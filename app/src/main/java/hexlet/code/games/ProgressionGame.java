@@ -19,35 +19,26 @@ public class ProgressionGame {
             int step = Utils.generateNumber(MIN_STEP, MAX_STEP);
             int hiddenIndex = Utils.generateNumber(0, PROGRESSION_LENGTH - 1);
 
-            int[] progression = generateProgression(start, step);
-            int hiddenNumber = progression[hiddenIndex];
+            String[] progression = generateProgression(start, step);
+            String correctAnswer = progression[hiddenIndex];
 
-            StringBuilder question = new StringBuilder();
+            progression[hiddenIndex] = "..";
 
-            for (int i = 0; i < progression.length; i++) {
-                if (i > 0) {
-                    question.append(" ");
-                }
+            String question = String.join(" ", progression);
 
-                if (i == hiddenIndex) {
-                    question.append("..");
-                } else {
-                    question.append(progression[i]);
-                }
-            }
-
-            gameData[round][0] = question.toString();
-            gameData[round][1] = String.valueOf(hiddenNumber);
+            gameData[round][0] = question;
+            gameData[round][1] = correctAnswer;
         }
 
         Engine.run(DESCRIPTION, gameData);
     }
 
-    private static int[] generateProgression(int start, int step) {
-        int[] progression = new int[PROGRESSION_LENGTH];
+    private static String[] generateProgression(int start, int step) {
+        String[] progression = new String[PROGRESSION_LENGTH];
 
         for (int i = 0; i < PROGRESSION_LENGTH; i++) {
-            progression[i] = start + i * step;
+            int currentElement = start + i * step;
+            progression[i] = String.valueOf(currentElement);
         }
 
         return progression;
